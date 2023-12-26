@@ -63,8 +63,8 @@ export function WeatherCard({ city }: WeatherCardProps) {
   const [backgroundColor, setBackgroundColor] = useState<string>("");
   const [colorText, setColorText] = useState<string>("");
   const [isLoading, setIsLoading] = useState(true);
-  const [forecastData, setForecastData] = useState<WeatherData | null>(null);
-  const [filteredForecast, setFilteredForecast] = useState([]);
+  // const [forecastData, setForecastData] = useState<WeatherData | null>(null);
+  // const [filteredForecast, setFilteredForecast] = useState([]);
   const { cityname } = useParams();
 
   const formatTimestamp = (timestamp: number): string => {
@@ -123,46 +123,47 @@ export function WeatherCard({ city }: WeatherCardProps) {
     };
   }, [city, weatherType, weather?.sys?.sunrise, cityname]);
 
-  useEffect(() => {
-    const filterForecastByFirstObjTime = () => {
-      if (!forecastData || !forecastData.list) {
-        return [];
-      }
+  // useEffect(() => {
+  //   const filterForecastByFirstObjTime = () => {
+  //     if (!forecastData || !forecastData.list) {
+  //       return [];
+  //     }
 
-      const firstObjTime = forecastData.list;
-      const filteredData = forecastData.list.filter((data) =>
-        data.dt_txt.endsWith(firstObjTime[0].dt_txt)
-      );
-      setFilteredForecast(filteredData as never[]);
-    };
+  //     const firstObjTime = forecastData.list;
+  //     const filteredData = forecastData.list.filter((data) =>
+  //       data.dt_txt.endsWith(firstObjTime[0].dt_txt)
+  //     );
+  //     setFilteredForecast(filteredData as never[]);
+  //   };
 
-    filterForecastByFirstObjTime();
-  }, [forecastData]);
+  //   filterForecastByFirstObjTime();
+  // }, [forecastData]);
 
-  useEffect(() => {
-    const getWeatherTimes = async () => {
-      try {
-        const responseTimes = await axios.get<WeatherData>(
-          `https://api.openweathermap.org/data/2.5/forecast?lat=${weather?.coord.lat}&lon=${weather?.coord.lon}&units=metric&APPID=d4f88a2936417f5a3ee60d915e98397f
-            `
-        );
-        setForecastData(responseTimes.data);
-      } catch (error) {
-        console.error("Erro ao buscar dados de clima", error);
-      }
-    };
-    getWeatherTimes();
-  }, [weather?.coord.lat, weather?.coord.lon]);
+  // useEffect(() => {
+  //   const getWeatherTimes = async () => {
+  //     try {
+  //       const responseTimes = await axios.get<WeatherData>(
+  //         `https://api.openweathermap.org/data/2.5/forecast?lat=${weather?.coord.lat}&lon=${weather?.coord.lon}&units=metric&APPID=d4f88a2936417f5a3ee60d915e98397f
+  //           `
+  //       );
+  //       setForecastData(responseTimes.data);
+  //     } catch (error) {
+  //       console.error("Erro ao buscar dados de clima", error);
+  //     }
+  //   };
+  //   getWeatherTimes();
+  // }, [weather?.coord.lat, weather?.coord.lon]);
 
   // function to filter forecast data on the time of the first object
-  const filterForecastData = () => {
-    const firstObjectTime = forecastData?.list[0].dt_txt.split(" ")[1];
-    const filteredData = forecastData?.list.filter(
-      (item: { dt_txt: string }) =>
-        item.dt_txt.split(" ")[1] === firstObjectTime
-    );
-    return filteredData;
-  };
+  // const filterForecastData = () => {
+  //   const firstObjectTime = forecastData?.list[0].dt_txt.split(" ")[1];
+  //   const filteredData = forecastData?.list.filter(
+  //     (item: { dt_txt: string }) =>
+  //       item.dt_txt.split(" ")[1] === firstObjectTime
+  //   );
+  //   return filteredData;
+  // };
+
   return (
     <>
       {isLoading ? (
