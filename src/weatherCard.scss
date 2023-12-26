@@ -1,0 +1,126 @@
+.containerCard {
+    display: flex;
+    flex-direction: column;
+    // width: 100%;
+    // height: 100%;
+    padding-top: 3rem;
+    justify-content: center;
+    align-items: center;
+    font-family: "Aktiv Grotesk";
+
+    .card-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 0.3rem;
+        font-weight: 100;
+        font-size: x-large;
+    }
+
+    .card-subtitle {
+        font-weight: lighter;
+        font-size: x-large;
+    }
+
+    .mainTempContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        padding-top: 2rem;
+
+        .mainTempBox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+
+            .mainTemp{
+                font-size: 7rem;
+                font-weight: 100;
+            }
+
+            .variation {
+                display: flex;
+                flex-direction: column;
+                font-weight: bold;
+
+                .celcius{
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    margin-left: 1rem;
+                }
+            }
+        }
+
+        .mainTemp {
+            font-size: 5rem;
+            font-weight: bold;
+        }
+
+        .image{
+            width: 10rem;
+            height: 10rem;
+            margin-top: -2rem;
+        }
+    }
+
+    .dayTimeContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding-bottom: 2rem;
+
+        .dayTimeBox{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: bold;
+
+            .spaceBetween{
+                display: flex;
+                gap: .3rem;
+            }
+        }
+    }
+
+    .characteristicsContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 2rem 0;
+
+        .characteristicsBox{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+
+            &> p {
+                font-size: .8rem;
+                font-weight: 200;
+            }
+
+            &> span {
+                font-size: .9rem;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .arrowBack {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 1rem;
+        cursor: pointer;
+    }
+}

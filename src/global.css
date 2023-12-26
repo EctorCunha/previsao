@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* font-family: 'Aktiv Grotesk', ; */
+    /* src: url(./fonts/AktivGrotesk-Thin.ttf); */
+}
+body{
+    display: flex;
+    /* width: 100vw; */
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #0F0F0F; */
+    color: #FFFFFF;
+}
+
+@font-face {
+    font-family: 'Aktiv Grotesk';
+    src: url(./fonts/AktivGrotesk-Thin.otf) format('opentype'), url(./fonts/AktivGrotesk-Thin.ttf) format('truetype');
+}

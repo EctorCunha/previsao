@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Aktiv Grotesk';
+    background-color: #0F0F0F;
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: .3rem;
+        font-weight: 100;
+        font-size: x-large;
+    }
+
+    .subtitle {
+        font-weight: lighter;
+        font-size: xx-large;
+    }
+
+    .globeImage{
+        padding: 3rem 0;
+    }
+
+    .list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+        font-weight: lighter;
+        font-size: 1.5rem;
+        list-style: none;
+        gap: 2rem;
+        padding: 0;
+
+        li > a {
+            text-decoration: none;
+            color: #ffffff;
+
+            &:hover {
+                cursor: pointer;
+                color: rgb(145, 147, 147);
+            }
+        }
+    }
+}
