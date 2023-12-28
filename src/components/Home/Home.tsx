@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
-// import { cities } from "./App";
-import globe from "./assets/globe.svg";
+// import { Link } from "react-router-dom";
+import globe from "../../assets/globe.svg";
 import "./home.scss";
 
 export function Home() {
@@ -21,7 +20,7 @@ export function Home() {
       <ul className="list">
         {cities.map((city, index) => (
           <li key={index}>
-            <Link to={`/city/${city}`}>{city}</Link>
+            <a href={`/city/${city}`}>{city}</a>
           </li>
         ))}
       </ul>

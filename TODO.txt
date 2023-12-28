@@ -1,11 +1,10 @@
-[] - Por favor, pedimos que o projeto seja publicado em: https://www.netlify.com/
+[x] - Por favor, pedimos que o projeto seja publicado em: https://www.netlify.com/
 
 Requisitos de avaliação:
-
  [x] - As cidades devem ser: Dallol(NG), Fairbanks(US), Londres(GB), Recife(BR), Vancouver(CA), Yakutsk(RU)
  [x] - Fidelidade ao layout enviado (estamos enviando o layout mobile e desktop)
  [x] - Responsividade. 
- [x] - Implementação de testes unitários
+ [-] - Implementação de testes unitários
  [x] - Framework Javascript a sua escolha. Ex: React, VueJS, Angular.
 
 Desejáveis:
@@ -17,6 +16,6 @@ Observações:
  [x] - Considere os horários 3:00, 9:00, 15:00 e 21:00 para a definição das temperaturas de Dawn, Morning, Afternoon, Night
 
 Diferenciais:
- [] - Rodar a aplicação fazendo o uso de um container do Docker
+ [x] - Rodar a aplicação fazendo o uso de um container do Docker
 
  [x] - 👉O envio pode ser feito com um link de repositório Git.

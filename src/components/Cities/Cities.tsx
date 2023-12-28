@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
-// import { WeatherCardProps,  } from "./App";
-import {WeatherCard} from "./WeatherCard";
+import {WeatherCard} from "../WeatherCard/WeatherCard";
 
 export function Cities() {
   const { cityname } = useParams();

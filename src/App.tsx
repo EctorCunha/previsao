@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home } from "./Home";
-import {Cities} from './Cities';
+import { Home } from "./components/Home/Home";
+import {Cities} from './components/Cities/Cities';
 import "./global.css";
 
 export interface WeatherCardProps {
